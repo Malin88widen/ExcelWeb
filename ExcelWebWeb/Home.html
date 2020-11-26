@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <!-- Turn off caching when debugging so that your JavaScript changes take effect. -->
+    @if (this.Context.IsDebuggingEnabled)
+    {
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    }
+
+
+    <title>Excel Add-In with Commands Sample</title>
+
+    <script src="Scripts/jquery-3.5.1.js" type="text/javascript"></script>
+    <script src="Scripts/MessageBanner.js" type="text/javascript"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+
+    <!-- To enable offline debugging using a local reference to Office.js, use:  -->
+    <!-- <script src="Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>  -->
+    <!-- <script src="Scripts/Office/1/office.js" type="text/javascript"></script>  -->
+
+    <script src="Home.js" type="text/javascript"></script>
+    <link href="Home.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/Button.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/MessageBanner.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- For Office UI Fabric Core, go to https://aka.ms/office-ui-fabric to learn more. -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.0/css/fabric.min.css">
+
+    <!-- To enable the offline use of Office UI Fabric Core, use: -->
+    <!-- link rel="stylesheet" href="Content/fabric.min.css" -->
+</head>
+
+<!-- Office UI Fabric JS and it's components are no longer actively supported. Please see https://aka.ms/PnP-OfficeFabricReact for recommended Patterns and Practices -->
+<!-- <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css"> -->
+
+<body class="ms-font-m ms-welcome">
+    <div id="content-header">
+        <div class="padding">
+            <h1>Welcome</h1>
+        </div>
+    </div>
+    <div id="content-main">
+        <div class="padding">
+            <p>
+                Press on the buttons after you choose a column to put in a value.
+            </p>
+            <br />
+            <h3>Try it out</h3>
+
+            <!--<button class="ms-Button" id="create-table">Create Table</button><br /><br />-->
+
+            <h3>Put in the right value in the right column:</h3>
+            <button class="ms-Button" id="set-first-statement"> "SET @chvXMLDoc...."</button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-articlenr">"Artikelnummer:"</button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-middle-statement">"D ="</button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-articel">"Artikel:" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-last-statement"> "\" />'"</button>
+            <br />
+            <br />
+
+            <h3>Extra fält:</h3>
+            <button class="ms-Button" id="set-Sstatement">" S =" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-Sproduct">"S-product:" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-Mstatement">" M =" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-Mproduct">"M-product:" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-S1statement">" S1 =" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-S1product">"S1-product:" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-M1statement">" M1 =" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-M1product">"M1-product:" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-S2statement">" S2 =" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-S2product">"S2-product:" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-M2statement">" M2 =" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-M2product">"M2-product:" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-S3statement">" S3 =" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-S3product">"S3-product:" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-M3statement">" M3 =" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-M3product">"M3-product:" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-S4statement">" S4 =" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-S4product">"S4-product:" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-M4statement">" M4 =" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-M4product">"M4-product:" </button>
+            <br />
+            <br />
+            <button class="ms-Button" id="set-last-statement_2"> "\" />'"</button>
+          
+
+        </div>
+    </div>
+
+</body>
+</html>
