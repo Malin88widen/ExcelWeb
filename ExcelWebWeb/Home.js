@@ -1,12 +1,16 @@
 ﻿'use strict';
 
+
+
 (function () {
 
     Office.onReady(function () {
         // Office is ready
         $(document).ready(function () {
             // The document is ready
-            //$('#create-table').click(createTable);
+            $('#create-table').click(createTable);
+
+        
 
             $('#set-first-statement').click(setFirstStatement);
             $('#set-articlenr').click(setArticelnumber); 
@@ -52,6 +56,7 @@
     function setFirstStatement() {
         Excel.run(function (context) {
             //Excel.createWorkbook();
+          
 
             //The code if you want to choose where the statement is going to be in the excel
             //var actSh = context.workbook.worksheets.getActiveWorksheet(); 
@@ -70,9 +75,13 @@
         });
     }
 
+  
+
+
     function setArticelnumber() {
         Excel.run(function (context) {
-            //Excel.createWorkbook();
+            Excel.createWorkbook();
+          
 
             var range = context.workbook.getSelectedRange(); //The code to let the user choose where to put the statement in the excel
             range.values = "Artikelnnummer:";
@@ -90,7 +99,7 @@
         Excel.run(function (context) {
 
             var rng = context.workbook.getSelectedRange();
-            rng.values = "\"D =\"";
+            rng.values = "\" D=\"";
 
             return context.sync();
         }).catch(function (error) {
@@ -446,6 +455,8 @@
         });
     }
 
+     
+
     //TEST
 
     //function createTable() {
@@ -483,6 +494,31 @@
     //            }
     //        });
     //}
+
+    //Fel på koden:
+
+    //function setLastStatement() {
+    //    Excel.run(function (context) {
+
+    //        var rng = worksheet.FindAllString("Asia", false, false);
+    //        foreach(CellRange rng in rng)
+    //        {
+    //            range.Text = "South American";
+    //        }
+
+    //        return context.sync();
+    //    }).catch(function (error) {
+    //        console.log("Error: " + error);
+    //        if (error instanceof OfficeExtension.Error) {
+    //            console.log("Debug info: " + JSON.stringify(error.debugInfo));
+    //        }
+    //    });
+    //}
+
+
+   
+
+    
 
 
 })();
